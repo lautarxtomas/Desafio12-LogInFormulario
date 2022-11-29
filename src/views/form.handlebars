@@ -1,34 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+{{#if name}}
+<div class="bg-success p-4 mb-4 d-flex justify-content-between align-items-center" style="--bs-bg-opacity: .5;">
+	<h1>Bienvenido {{name}}</h1>
+	<form action="/logout" method="POST">
+		<div>
+			<input class="btn btn-success" type='submit' value='Salir' />
+		</div>
+	</form>
+</div>
+{{/if}}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Carga random de productos y chat en vivo</title>
-</head>
-
-<body>
-
-    <div id="full-container">
-        <div id="login-container">
-            <form id="login-form" action="#">
-                <h2>LOGIN DE USUARIO:</h2>
-                <label for="nombreUsuario"> Ingrese su nombre: </label>
-                <input type="text" name="nombreUsuario" required>
-                <input type="submit" class="btn" value="Logearse">
-            </form>
-        </div>
-        <button id="deslog-button" class="hide">Deslogearse</button>
-    </div>
-
-
-
-
-    <!-- Formulario con productos random de FakerJS -->
+ <!-- Formulario con productos random de FakerJS -->
     <h1>Mis productos</h1>
     <!-- Contenedor de productos -->
     <h2>Listado de productos:</h2>
@@ -77,8 +58,3 @@
             <div id="messages"></div>
         </div>
     </section>
-
-    <script src="js/index.js"></script>
-</body>
-
-</html>
