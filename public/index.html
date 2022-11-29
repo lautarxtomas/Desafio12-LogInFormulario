@@ -13,14 +13,18 @@
 
 <body>
 
-    <div id="login-container">
-        <form id="login-form" action="#">
-            <h2>LOGIN DE USUARIO:</h2>
-            <label for="nombreUsuario"> Ingrese su nombre: </label>
-            <input type="text" name="nombreUsuario">
-            <input type="submit" class="btn" value="Logearse">
-        </form>
+    <div id="full-container">
+        <div id="login-container">
+            <form id="login-form" action="#">
+                <h2>LOGIN DE USUARIO:</h2>
+                <label for="nombreUsuario"> Ingrese su nombre: </label>
+                <input type="text" name="nombreUsuario" required>
+                <input type="submit" class="btn" value="Logearse">
+            </form>
+        </div>
+        <button id="deslog-button" class="hide">Deslogearse</button>
     </div>
+
 
 
 

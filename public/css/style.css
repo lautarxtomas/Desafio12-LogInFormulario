@@ -212,7 +212,7 @@ input#chatTextMsg{
     margin: 30px auto;
 }
 
-#login-container{
+#full-container{
     border: solid 3px blue;
     width: 400px;
     margin: 0 auto;
@@ -221,9 +221,23 @@ input#chatTextMsg{
     padding: 30px;
 }
 
+/* #login-container{
+    
+} */
+
 .login-username{
     display: flex;
     justify-content: center;
     font-size: 40px;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 

@@ -126,6 +126,7 @@ renderProducts(); // CADA VEZ QUE RECARGUEMOS LA PAG SE RENDERIZAN PRODUCTOS NUE
 
 const loginForm = document.getElementById('login-form')
 const loginContainer = document.getElementById('login-container')
+const deslogBtn = document.getElementById('deslog-button')
 
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -135,8 +136,24 @@ loginForm.addEventListener('submit', (e) => {
     }
 
     loginContainer.innerHTML = `<p class="login-username"> Bienvenido/a ${data.username} </p>
-    <button class="btn" id="deslog-button"> Deslogearse </button>
     `
+    deslogBtn.classList.remove("hide")
+    deslogBtn.classList.add("show")
 
 });
+
+deslogBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // const data = {
+    //     username: e.target.nombreUsuario.value
+    // }
+
+    loginContainer.innerHTML = `<h3> Hasta luego! </h3>`
+
+    deslogBtn.classList.remove("show")
+    deslogBtn.classList.add("hide")
+
+});
+
 
