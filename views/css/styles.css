@@ -212,37 +212,15 @@ input#chatTextMsg{
     margin: 30px auto;
 }
 
-#full-container{
-    border: solid 3px blue;
+.loginContainer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-flow: column;
+    gap: 20px;
+    border: solid 3px rgb(86, 86, 141);
     width: 400px;
-    height: 300px;
     margin: 0 auto;
     margin-top: 30px;
-    text-align: center;
-    padding: 30px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* #login-container{
-    
-} */
-
-.login-username{
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-}
-
-.hide{
-    display: none;
-}
-
-.show{
-    display: flex;
-    margin: 0 auto;
-    margin-top: 20px;
 }
 
