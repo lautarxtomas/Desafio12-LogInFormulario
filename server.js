@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const session = require('express-session')
 const { engine } = require('express-handlebars');
@@ -45,13 +46,13 @@ const io = new Socket(httpServer)
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(express.static('public')); --> descomentar y comentar las 6 lineas de abajo para probar con HTML (no handlebars), faltan sessions
+// app.use(express.static('public')); // --> descomentar y comentar las 6 lineas de abajo para probar con HTML (no handlebars), faltan sessions
 
 app.use(cookieParser())
 app.use(router)
-app.use(express.static('views'))
+app.use(express.static('views'));
 app.engine('handlebars', engine())
-app.set('views', './src/views')
+app.set('views', './views');
 app.set('view engine', 'handlebars')
 
 
